@@ -1,33 +1,32 @@
-
-# Define las preguntas y las opciones de respuesta
+# DEFINICIÓN DE LAS PREGUNTAS CON SUS RESPUESTAS EN UN DICCIONARIO
 preguntas = [
     {
         'pregunta': '¿Qué proxy es el que usamos a diario?',
         'opciones': ['a) Proxy Transparente', 'b) Proxy NAT', 'c) Proxy Reverse', 'd) Proxy SSL'],
-        'respuesta': 'b'
+        'respuesta': 'Proxy NAT'
     },
     {
         'pregunta': '¿Qué proxy se utiliza para transferir archivos de un servidor a otro?',
         'opciones': ['a) Transparente', 'b) Reverse', 'c) FTP', 'd) NAT'],
-        'respuesta': 'c'
+        'respuesta': 'FTP'
     },
     {
         'pregunta': '¿Qué función principal tiene un servidor proxy caché?',
         'opciones': ['a) Proporcionar anonimato ', 'b) Aumentar la seguridad ', 'c) Filtrar el tráfico ', 'd) Cachear contenido para acelerar el acceso a los sitios web'],
-        'respuesta': 'd'
+        'respuesta': 'Cachear contenido para acelerar el acceso a los sitios web'
     },
     {
         'pregunta': '¿Qué tipo de proxy es recomendable utilizar para una mayor seguridad en una organización?',
-        'opciones': ['a) PeProxy Web', 'b) Proxy caché', 'c) Proxy SSL', 'd) Proxy NAT'],
-        'respuesta': 'c'
+        'opciones': ['a) Proxy Web', 'b) Proxy Caché', 'c) Proxy SSL', 'd) Proxy NAT'],
+        'respuesta': 'SSL'
     },
     {
         'pregunta': '¿Qué proxy cifra los datos enviados?',
-        'opciones': ['a) SSL', 'b) Reverse', 'c) FTP', 'd) NAT'],
-        'respuesta': 'a'
+        'opciones': ['a) Proxy SSL', 'b) Proxy Reverse', 'c) Proxy FTP', 'd) Proxy NAT'],
+        'respuesta': 'SSL'
     }
 ]
-# Función para mostrar las preguntas y obtener las respuestas del usuario
+# MÓDULO QUE FORMULA LAS PREGUNTAS Y RECOGE EL INPUT DEL USUARIO
 def hacer_cuestionario(preguntas):
     puntuacion = 0
     respuestas_usuario = []
@@ -45,5 +44,5 @@ def hacer_cuestionario(preguntas):
             print(f'Pregunta {i + 1} está mal. Respuesta dada: {respuestas_usuario[i]}. Respuesta correcta: {pregunta["respuesta"]}')
 
 
-# Ejecuta el cuestionario
+#EJECUCIÓN
 hacer_cuestionario(preguntas)
